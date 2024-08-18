@@ -41,7 +41,7 @@ breadcrumbs:
 
 <div markdown="1" class=" ghcms ghcms-tanks">
 
-![inline block](<https://cdn.discordapp.com/attachments/923510071026155550/1037935633924104202/badge-tank.png>) **Tanks soak up damage and protect weaker bots — they are best placed up front.**
+![inline block](</assets/img/icons/tanks.png>) **Tanks soak up damage and protect weaker bots — they are best placed up front.**
 
 </div>
 
@@ -90,7 +90,7 @@ breadcrumbs:
 
 <div markdown="1" class=" ghcms ghcms-splashers">
 
-![inline block](<https://cdn.discordapp.com/attachments/923510071026155550/1037935633211076711/badge-splasher.png>) **Splashers damage multiple bots that are close together — best placed in the back or behind Tanks.**
+![inline block](</assets/img/icons/splashers.png>) **Splashers damage multiple bots that are close together — best placed in the back or behind Tanks.**
 
 </div>
 
@@ -136,7 +136,7 @@ breadcrumbs:
 ## Snipers
 
 <div markdown="1" class=" ghcms ghcms-snipers">
-![inline block](<https://cdn.discordapp.com/attachments/923510071026155550/1037935632871333918/badge-sniper.png>) **Snipers do a lot of damage from a distance — protect these bots as much as possible.**
+![inline block](</assets/img/icons/snipers.png>) **Snipers do a lot of damage from a distance — protect these bots as much as possible.**
 </div>
 
 
@@ -183,7 +183,7 @@ breadcrumbs:
 
 <div markdown="1" class=" ghcms ghcms-chasers">
 
-![inline block](<https://cdn.discordapp.com/attachments/923510071026155550/1037935632036671588/badge-chaser.png>) **Chasers are fast melee bots that are good at getting close to ranged enemies — let these bots get close to ranged damage dealers.**
+![inline block](</assets/img/icons/chasers.png>) **Chasers are fast melee bots that are good at getting close to ranged enemies — let these bots get close to ranged damage dealers.**
 
 </div>
 
@@ -231,7 +231,7 @@ breadcrumbs:
 
 <div markdown="1" class=" ghcms ghcms-evaders">
 
-![inline block](<https://cdn.discordapp.com/attachments/923510071026155550/1037935632460288001/badge-evader.png>) **Evaders are fast bots that are good at staying away from melee enemies — distract Chasers with these bots!**
+![inline block](</assets/img/icons/evaders.png>) **Evaders are fast bots that are good at staying away from melee enemies — distract Chasers with these bots!**
   
 </div>
 
@@ -279,7 +279,7 @@ breadcrumbs:
 
 <div markdown="1" class=" ghcms ghcms-brawlers">
 
-![inline block](<https://cdn.discordapp.com/attachments/923510071026155550/1037935631692734525/badge-brawler.png>) **Brawlers are good at fighting other melee bots — 1v1 is their specialty!**
+![inline block](</assets/img/icons/brawlers.png>) **Brawlers are good at fighting other melee bots — 1v1 is their specialty!**
 
 </div>
 
@@ -327,7 +327,7 @@ breadcrumbs:
 
 <div markdown="1" class=" ghcms ghcms-supports">
 
-![inline block](<https://cdn.discordapp.com/attachments/923510071026155550/1037935633575972874/badge-support.png>) **Supports make your other bots more effective — best placed beside Tanks.**
+![inline block](</assets/img/icons/supports.png>) **Supports make your other bots more effective — best placed beside Tanks.**
 
 </div>
 
@@ -383,6 +383,7 @@ breadcrumbs:
 <span id="ai"></span>
 
 <div markdown="1" class=" ghcms ghcms-ai">
+
 ## AI
 
 **Getting your bot to AI5 (the highest rank) will make much more powerful. AI trees (sometimes called AI tracks) are very important to maximizing your bots' potential. For some bots and combos ([Chainer](</chainer>)) AI5 is an absolute game-changer!**
@@ -430,7 +431,9 @@ First of all, it's important to note that **Recruits don't gain AI Exp**, so you
 
 <br>
 
-![300px Pluggie Packs near a Caravan](<https://cdn.discordapp.com/attachments/923510071026155550/996136135560540301/unknown.png>)<br>
+<br>
+
+[AI Farming using Bombardment](</assets/img/farming/AI_Farming_Near_Caravan.mp4>)<br>
 
 **Use your [Gadgets](</gadgets>)**
 

@@ -6,6 +6,7 @@
         <div class="feedback-form" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #333; color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); width: 75%;">
             <h2 style="margin-top: 0;">Wiki Feedback</h2>
             <form id="feedbackForm">
+            
                 <label for="nickname" style="display: block; margin-bottom: 10px; color: #fff;">Nickname:</label>
                 <input type="text" id="nickname" required style="display: block; margin-bottom: 10px; color: #000;">
                 <label for="description" style="display: block; margin-bottom: 10px; color: #fff;">Description:</label>
@@ -49,6 +50,65 @@
             closeButton.addEventListener("click", hideFeedbackForm);
             resetButton.addEventListener("click", resetFeedbackForm);
 
+            function sendFeedbackToDiscord(fullUrl, nickname, description, imageFile, fileExtension) {
+            // exposing the webhook in front-facing js is inevitable
+            const webhookUrl = "{{ site.data.featureData.feedback.webhookUrl }}";
+
+            
+
+            
+
+            const payload = {
+                username: "Wiki Feedbeat",
+                content: `<@&1135630948151595088> ${fullUrl}`,
+                embeds: [
+                    {
+                        "title": `Feedback by: ${nickname}`,
+                        "description": `${description}`
+                    }
+                ]
+            };
+
+            {% if site.data.featureData.feedback.testing %}
+            payload.embeds[0].footer = {
+                'text': `Testing mode`
+            }
+            payload.content = ""
+            payload.username = `${payload.username}`
+            {% endif %}
+
+            const formData = new FormData();
+
+            {% if site.data.featureData.feedback.allowImage %}
+            if (imageFile !== null) {
+                payload.embeds[0].image = {
+                    url: 'attachment://image.' + fileExtension
+                };
+                formData.append('image', imageFile, 'image.' + fileExtension);
+            }
+            {% endif %}
+
+            const payloadJson = JSON.stringify(payload);
+            formData.append('payload_json', JSON.stringify(payload));
+
+            fetch(webhookUrl, {
+                method: 'POST',
+                body: formData,
+            })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Thank you for your feedback!');
+                    } else {
+                        alert('Something went wrong... If it keeps happening, contact us on Discord.');
+                        console.error("Error occurred while sending feedback:", response)
+                    }
+                })
+                .catch(error => {
+                    alert('Something went wrong... If it keeps happening, contact us on Discord.');
+                    console.error("Error occurred while sending feedback:", error)
+                });
+            }
+
             feedbackForm.addEventListener("submit", async function (event) {
                 event.preventDefault();
 
@@ -85,52 +145,6 @@
 
         });
 
-        function sendFeedbackToDiscord(fullUrl, nickname, description, imageFile, fileExtension) {
-            // exposing the webhook in front-facing js is inevitable
-            const webhookUrl = "{{ site.data.featureData.feedback.webhookUrl }}";
-
-            const payload = {
-                username: "Wiki Feedbeat",
-                content: `<@&1135630948151595088> ${fullUrl}`,
-                embeds: [
-                    {
-                        "title": `Feedback by: ${nickname}`,
-                        "description": `${description}`
-                    }
-                ]
-            };
-
-            const formData = new FormData();
-
-            {% if site.data.featureData.feedback.allowImage %}
-            if (imageFile !== null) {
-                payload.embeds[0].image = {
-                    url: 'attachment://image.' + fileExtension
-                };
-                formData.append('image', imageFile, 'image.' + fileExtension);
-            }
-            {% endif %}
-
-            const payloadJson = JSON.stringify(payload);
-            formData.append('payload_json', JSON.stringify(payload));
-
-            fetch(webhookUrl, {
-                method: 'POST',
-                body: formData,
-            })
-                .then(response => {
-                    if (response.ok) {
-                        alert('Thank you for your feedback!');
-                    } else {
-                        alert('Something went wrong... If it keeps happening, contact us on Discord.');
-                        console.error("Error occurred while sending feedback:", response)
-                    }
-                })
-                .catch(error => {
-                    alert('Something went wrong... If it keeps happening, contact us on Discord.');
-                    console.error("Error occurred while sending feedback:", error)
-                });
-        }
     </script>
 <!-- /Feedback Form handling -->
 {%- endif -%}

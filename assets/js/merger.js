@@ -29,9 +29,9 @@ async function fetchEdits(){
   const response = await fetch(jsonUrl);
   edits = await response.json();
   debug = edits;
-  console.log('fetched');
-  console.log(edits);
-  console.log('---');
+  // console.log('fetched');
+  // console.log(edits);
+  // console.log('---');
   if (edits){
     for (let page in edits){
       if (page == '/admin'){ continue }
@@ -42,7 +42,7 @@ async function fetchEdits(){
       	let mdEdit = mdConverter.makeMarkdown(
       		decodeURI(atob(edits[page][edit].b64))
       	).replaceAll('<!-- -->\n', '').trim();
-      	console.log(mdEdits)
+      	// console.log(mdEdits)
       	mdEdits[page][edit] = mdEdit;
       	$div.append($('<h3>section_title</h3>').text(edit));
       	$div.append($('<div class="source-links"><span>Github source file:</span></div>')
@@ -72,20 +72,31 @@ async function fetchEdits(){
 
 
 function generateEdits(){
-	console.log('generate');
+	//console.log('generate');
 	let updatedEdits = edits;
 	$('textarea').map((i,t)=>{
-		let page = $(t).attr('page');
-		let edit = $(t).attr('edit');
-		let value = t.value;
-		if (mdEdits[page][edit]!==value) {
-			if (value.length===0){
-				console.log('delete')
-				delete updatedEdits[page][edit]
-				if (Object.keys(updatedEdits[page]).length === 0){ delete updatedEdits[page] }
-			} else {
-				console.log('Updated '+page+'#'+edit+':\n', value.slice(0,100));
-				updatedEdits[page][edit]['b64'] = btoa(encodeURI(mdConverter.makeHtml(value)));		
+		if(t.attributes.class && t.attributes.class=="edit") {
+			console.log(t.attributes.class.value=="edit", i);
+		
+		
+			let page = $(t).attr('page');
+			let edit = $(t).attr('edit');
+		
+			let value = t.value;
+		
+			console.log(t);
+		
+			if (mdEdits[page][edit]!==value) {
+			
+			
+				if (value.length===0){
+					console.log('delete')
+					delete updatedEdits[page][edit]
+					if (Object.keys(updatedEdits[page]).length === 0){ delete updatedEdits[page] }
+				} else {
+					console.log('Updated '+page+'#'+edit+':\n', value.slice(0,100));
+					updatedEdits[page][edit]['b64'] = btoa(encodeURI(mdConverter.makeHtml(value)));		
+				}
 			}
 		}
 	});

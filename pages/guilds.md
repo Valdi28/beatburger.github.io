@@ -228,7 +228,12 @@ Can you feel that buzz in your fuzz? Watch out for static discharge as the Elect
 
 ## Creature Feature
 <div markdown="1" class=" ghcms ghcms-creature-feature">
-**Start**: July 28th, 2022
+
+**Start**:<br>
+
+ July 28th, 2022<br>
+
+ July 26th, 2024
 
 **Duration**: 14 days
 
@@ -240,9 +245,13 @@ Botworld's celebration of all creatures great and small has begun! From the tini
 
 - Find Rare Butterflies throughout Botworld (1000) - *1000 Guild Coins*<br>
 
+
+
 ![200pxRare Butterfly](</assets/img/pics/guild-event-butterfly-ani.gif>)
 
 - Find Origami Animals near Forests (1000) - *1000 Guild Coins*<br>
+
+
 
 ![Origami Animals](</assets/img/pics/event_origami.png>)
 

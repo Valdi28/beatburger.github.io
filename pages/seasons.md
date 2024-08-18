@@ -69,15 +69,17 @@ Everyone starts with this season
 
 <div markdown="1" class=" ghcms ghcms-currentseason">
 
-## Current season: The Season of the Snail
-
-[To Be Written](</contribute#tbw>)
+## Current season: Season of Fire #23
 
 ### Rewards
 
-This Season was 42 Days long starting on December, 30th 2021
+Duration: 42 days<br>
 
-**Curated List**
+Start date: 2 July, 2024
+
+### Curated List
+
+[To Be Written](</contribute#tbw>)
 
 </div>
 
@@ -94,25 +96,55 @@ This Season was 42 Days long starting on December, 30th 2021
 
 <div markdown="1" class=" ghcms ghcms-previousseasons">
 
-## Previous seasons
+## Previous Seasons
 
-### Season of Protection
+### Season of Duality #22
 
-### Season of Chaos
+### Season of the Artist #21
 
-### Season of Corruption
+### Season of Balance #20
 
-### Season of the mist
+### Season of Alliance #19
 
-### Season of the snail
+### Season of Radiance #18
 
-### Season of the wind
+### Season of Style #17
+
+### Season of Earth #16
+
+### Season of Champions #15
+
+### Season of the Cosmos #14
+
+### Season of Challenge #13
+
+### Season of Nature #12
+
+### Season of Sea #11
+
+### Season of Glamour #10
+
+### Season of the Stars #9
+
+### Season of Celebration #8
+
+### Season of Nibblers #7
+
+### Season of Protection #6
+
+### Season of Chaos #5
+
+### Season of Corruption #4
+
+### Season of the Mist #3
+
+### Season of the Snail #2
+
+### Season of the Wind #1
 
 ### Season 0
 
 ### Starter Season
-
-[To Be Written](</contribute#tbw>)
 
 </div>
 

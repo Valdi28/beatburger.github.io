@@ -10,7 +10,9 @@ breadcrumbs:
 
 Draft by:
 <div markdown="1" class=" ghcms ghcms-editors">
-put your name here so we know who to contact 
+put your name here so we know who to contact<br>
+
+Hello World!
 </div>
 
 <div markdown="1" class=" ghcms ghcms-section-1">
@@ -21,7 +23,24 @@ put your name here so we know who to contact
 
 ### Smaller subtitles
 
+#### More Smaller subitile
+
+##### Ridiculously small subtitle
+
 Formatting demo:
+
+**bold** for bold,
+
+*italics* for italic,
+
+You can combine stuff too ***like this***
+
+[link to other pages like this\]\()
+
+- list
+- stuff
+- like
+- this
 
 **bold** for bold,
 

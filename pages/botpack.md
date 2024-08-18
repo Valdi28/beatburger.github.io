@@ -198,5 +198,6 @@ Each Mine deals around 1/5th to 1/6th of a [Boss](</bosses>)' health bar worth o
 ![Image](</assets/img/gadgets/jammer.png>)
 
 - **Level 1:** 2 uses
+
 </div>
 
